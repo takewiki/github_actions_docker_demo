@@ -34,8 +34,8 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
             ${{ steps.meta.outputs.tags }}
-            docker.io/${{ vars.DOCKER_USERNAME }}/${{ secrets.DOCKER_PASSWORD }}:1.0.4
-            ${{ vars.DOCKER_USERNAME }}/${{ secrets.DOCKER_PASSWORD }}:latest
+            docker.io/${{ vars.DOCKER_USERNAME }}/my-image:1.0.5
+            ${{ vars.DOCKER_USERNAME }}/my-image:latest
             
           
           annotations: ${{ steps.meta.outputs.annotations }}
